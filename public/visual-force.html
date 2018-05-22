@@ -1,0 +1,25 @@
+<apex:page controller="FX5.FXBaseController" docType="html-5.0" applyHtmlTag="false" applyBodyTag="false" showChat="false"
+  showHeader="false" showQuickActionVfHeader="false" sidebar="false" standardStylesheets="false">
+
+  <html>
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>React Visual Force</title>
+    <script type="text/javascript">
+      window.salesforce = {
+        sessionId: '{!$Api.Session_ID}',
+        resource_path: "https://cdn.fieldfx.com/{!$Api.Session_ID}/{!namespaceWithoutUnderscores + '__'}/{!FxCustomSettings.CDN_PacketViewer_Resource_URL}/"
+      };
+    </script>
+    <script type="text/javascript" src="https://cdn.fieldfx.com/{!$Api.Session_ID}/{!namespaceWithoutUnderscores + '__'}/{!FxCustomSettings.CDN_PacketViewer_Resource_URL}/loader.js"></script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+
+  </html>
+
+</apex:page>

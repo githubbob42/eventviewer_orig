@@ -1,0 +1,53 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# Ignore npm packaging
+/node_modules
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# testing
+/coverage
+
+# production
+/build
+/package
+
+# misc
+# Ignore all logfiles and tempfiles.
+*.log
+/tmp
+
+## Ignore all generated files
+npm-debug.log
+*.sublime-workspace
+*.results.xml
+
+# Output folder
+dist
+
+# Numerous always-ignore extensions
+*~
+*.diff
+*.patch
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+.cache
+.project
+.settings
+.tmproj
+nbproject
+Thumbs.db
+*.sublime-*
+.mimosa

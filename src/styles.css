@@ -1,0 +1,77 @@
+body {
+  background: #f1f1f1;
+}
+article {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+header {
+  box-shadow: 0 0 1rem 1rem #f1f1f1;
+  z-index: 1;
+}
+main {
+  flex: 1;
+  padding: 0 0 1rem;
+  overflow: auto;
+}
+main .ui.loading.segment:before {
+  background: #f1f1f1;
+}
+table.selectable tr {
+  cursor: pointer;
+}
+
+
+.ui.steps,
+.ui.steps .step {
+  border-radius: 0 !important;
+}
+.ui.steps {
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.ui.steps .step:first-child {
+  border-left: none !important;
+}
+.ui.steps .step:last-child {
+  border-right: none !important;
+}
+
+
+#login {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+#login form {
+  width: 350px;
+  margin: -6rem auto 0 auto;
+}
+#login h1 {
+  margin: 0;
+}
+#login .rocket {
+  position: absolute;
+  opacity: .1;
+  font-size: 8em;
+  margin-top: -5rem;
+  margin-left: -1rem;
+}
+#login .or:before {
+  line-height: 1.65em;
+}
+
+.value .icon {
+  margin: 0 .5em;
+}
+.value:last-child .icon {
+  display: none;
+}

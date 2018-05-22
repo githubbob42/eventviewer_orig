@@ -1,0 +1,45 @@
+{
+  "name": "eventviewer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "0.18.0",
+    "jquery": "3.3.1",
+    "jquery-ui": "1.12.1",
+    "jsforce": "1.8.1",
+    "jsforce-ajax-proxy": "1.0.0",
+    "lodash": "4.17.5",
+    "moment": "2.21.0",
+    "moment-timezone": "0.5.14",
+    "prop-types": "15.6.1",
+    "query-string": "6.0.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "semantic-ui-react": "0.80.0"
+  },
+  "devDependencies": {
+    "concurrently": "3.5.1",
+    "lint-staged": "7.0.0",
+    "prettier": "1.11.1",
+    "react-scripts": "1.1.4",
+    "wait-on": "2.1.0"
+  },
+
+  "lint-staged": {
+    "*.js": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "homepage": ".",
+  "proxy": "http://localhost:4030",
+  "scripts": {
+    "react-start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "OLDstart": "concurrently 'export BROWSER=none && npm run react-start' 'wait-on http://localhost:3000 && npm run electron-start'",
+    "OLDbuild": "npm run react-build && npm run electron-build",
+    "start": "concurrently 'node jsforce-ajax-proxy' 'export BROWSER=none && export PORT=5000 && npm run react-start'"
+  }
+}
